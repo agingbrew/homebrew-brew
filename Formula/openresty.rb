@@ -124,9 +124,9 @@ class Openresty < Formula
 end
 
 __END__
-diff --color -Naur ./openresty-1.21.4.1/bundle/lua-resty-core-0.1.23/lib/resty/core/response.lua ./openresty-1.21.4.1.patch/bundle/lua-resty-core-0.1.23/lib/resty/core/response.lua
---- ./openresty-1.21.4.1/bundle/lua-resty-core-0.1.23/lib/resty/core/response.lua	2021-11-14 09:43:51
-+++ ./openresty-1.21.4.1.patch/bundle/lua-resty-core-0.1.23/lib/resty/core/response.lua	2022-11-28 10:12:53
+diff --color -Naur openresty-1.21.4.1/bundle/lua-resty-core-0.1.23/lib/resty/core/response.lua openresty-1.21.4.1.patch/bundle/lua-resty-core-0.1.23/lib/resty/core/response.lua
+--- openresty-1.21.4.1/bundle/lua-resty-core-0.1.23/lib/resty/core/response.lua	2021-11-14 09:43:51
++++ openresty-1.21.4.1.patch/bundle/lua-resty-core-0.1.23/lib/resty/core/response.lua	2022-11-28 10:12:53
 @@ -45,6 +45,61 @@
  ]]
 
@@ -213,9 +213,9 @@ diff --color -Naur ./openresty-1.21.4.1/bundle/lua-resty-core-0.1.23/lib/resty/c
      end
 
      if rc == 0 or rc == FFI_DECLINED then
-diff --color -Naur ./openresty-1.21.4.1/bundle/lua-resty-core-0.1.23/lib/resty/core/shdict.lua ./openresty-1.21.4.1.patch/bundle/lua-resty-core-0.1.23/lib/resty/core/shdict.lua
---- ./openresty-1.21.4.1/bundle/lua-resty-core-0.1.23/lib/resty/core/shdict.lua	2021-11-14 09:43:51
-+++ ./openresty-1.21.4.1.patch/bundle/lua-resty-core-0.1.23/lib/resty/core/shdict.lua	2022-11-28 10:12:53
+diff --color -Naur openresty-1.21.4.1/bundle/lua-resty-core-0.1.23/lib/resty/core/shdict.lua openresty-1.21.4.1.patch/bundle/lua-resty-core-0.1.23/lib/resty/core/shdict.lua
+--- openresty-1.21.4.1/bundle/lua-resty-core-0.1.23/lib/resty/core/shdict.lua	2021-11-14 09:43:51
++++ openresty-1.21.4.1.patch/bundle/lua-resty-core-0.1.23/lib/resty/core/shdict.lua	2022-11-28 10:12:53
 @@ -72,9 +72,39 @@
  void *ngx_http_lua_ffi_shdict_udata_to_zone(void *zone_udata);
      ]]
@@ -543,9 +543,9 @@ diff --color -Naur ./openresty-1.21.4.1/bundle/lua-resty-core-0.1.23/lib/resty/c
 
  if not pcall(function () return C.free end) then
      ffi.cdef[[
-diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers.c ./openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers.c
---- ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers.c	2022-03-02 14:54:22
-+++ ./openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers.c	2022-11-28 10:11:19
+diff --color -Naur openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers.c openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers.c
+--- openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers.c	2022-03-02 14:54:22
++++ openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers.c	2022-11-28 10:11:19
 @@ -1211,4 +1211,16 @@
  #endif
 
@@ -563,9 +563,9 @@ diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_
 +
 +
  /* vi:set ft=c ts=4 sw=4 et fdm=marker: */
-diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers_out.h ./openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers_out.h
---- ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers_out.h	2022-03-02 14:54:22
-+++ ./openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers_out.h	2022-11-28 10:11:19
+diff --color -Naur openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers_out.h openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers_out.h
+--- openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers_out.h	2022-03-02 14:54:22
++++ openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_headers_out.h	2022-11-28 10:11:19
 @@ -12,6 +12,22 @@
  #include "ngx_http_lua_common.h"
 
@@ -589,9 +589,9 @@ diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_
  ngx_int_t ngx_http_lua_set_output_header(ngx_http_request_t *r,
      ngx_http_lua_ctx_t *ctx, ngx_str_t key, ngx_str_t value, unsigned override);
  int ngx_http_lua_get_output_header(lua_State *L, ngx_http_request_t *r,
-diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.c ./openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.c
---- ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.c	2022-03-02 14:54:22
-+++ ./openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.c	2022-11-28 10:11:19
+diff --color -Naur openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.c openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.c
+--- openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.c	2022-03-02 14:54:22
++++ openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.c	2022-11-28 10:11:19
 @@ -2092,4 +2092,38 @@
  #endif
 
@@ -631,9 +631,9 @@ diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_
 +
 +
  /* vi:set ft=c ts=4 sw=4 et fdm=marker: */
-diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.h ./openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.h
---- ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.h	2022-03-02 14:54:22
-+++ ./openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.h	2022-11-28 10:11:19
+diff --color -Naur openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.h openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.h
+--- openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.h	2022-03-02 14:54:22
++++ openresty-1.21.4.1.patch/bundle/ngx_lua-0.10.21/src/ngx_http_lua_shdict.h	2022-11-28 10:11:19
 @@ -55,6 +55,52 @@
  } ngx_http_lua_shm_zone_ctx_t;
 
@@ -687,9 +687,9 @@ diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_lua-0.10.21/src/ngx_http_lua_
  ngx_int_t ngx_http_lua_shdict_init_zone(ngx_shm_zone_t *shm_zone, void *data);
  void ngx_http_lua_shdict_rbtree_insert_value(ngx_rbtree_node_t *temp,
      ngx_rbtree_node_t *node, ngx_rbtree_node_t *sentinel);
-diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.c ./openresty-1.21.4.1.patch/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.c
---- ./openresty-1.21.4.1/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.c	2021-12-06 08:25:48
-+++ ./openresty-1.21.4.1.patch/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.c	2022-11-28 10:14:05
+diff --color -Naur openresty-1.21.4.1/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.c openresty-1.21.4.1.patch/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.c
+--- openresty-1.21.4.1/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.c	2021-12-06 08:25:48
++++ openresty-1.21.4.1.patch/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.c	2022-11-28 10:14:05
 @@ -2027,4 +2027,38 @@
  #endif
 
@@ -729,9 +729,9 @@ diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_stream_lua-0.0.11/src/ngx_str
 +
 +
  /* vi:set ft=c ts=4 sw=4 et fdm=marker: */
-diff --color -Naur ./openresty-1.21.4.1/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.h ./openresty-1.21.4.1.patch/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.h
---- ./openresty-1.21.4.1/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.h	2021-12-06 08:25:48
-+++ ./openresty-1.21.4.1.patch/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.h	2022-11-28 10:14:05
+diff --color -Naur openresty-1.21.4.1/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.h openresty-1.21.4.1.patch/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.h
+--- openresty-1.21.4.1/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.h	2021-12-06 08:25:48
++++ openresty-1.21.4.1.patch/bundle/ngx_stream_lua-0.0.11/src/ngx_stream_lua_shdict.h	2022-11-28 10:14:05
 @@ -63,6 +63,52 @@
  } ngx_stream_lua_shm_zone_ctx_t;
 
